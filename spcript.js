@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             showMessage('Enviando tu solicitud...', 'success');
 
-            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook/ed72251a-3283-4dec-86bd-d91ae65820ac';
+            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook-test/ed72251a-3283-4dec-86bd-d91ae65820ac';
 
             const formData = new FormData(form);
 
