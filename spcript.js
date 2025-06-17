@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mostrar mensaje de carga
             showMessage('Enviando tu solicitud...', 'success');
             
-            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook-test/ed72251a-3283-4dec-86bd-d91ae65820ac';
+            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook/ed72251a-3283-4dec-86bd-d91ae65820ac';
             
             const response = await fetch(webhookUrl, {
                 method: 'POST',
