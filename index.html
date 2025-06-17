@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reserva tu clase gratuita en nuestra academia de idiomas y oposiciones. Cursos intensivos online y presenciales. ¡Reserva tu plaza ahora!">
+    <title>Academia LinguaPro | Solicita tu Clase Gratuita</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Academia LinguaPro</h1>
+            <p>Formación de excelencia en idiomas y oposiciones</p>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="container">
+            <section class="hero">
+                <div class="hero-text">
+                    <h2>¡Reserva tu clase gratuita ahora!</h2>
+                    <p>Descubre por qué somos la academia líder en formación de idiomas y preparación de oposiciones. Profesores nativos, metodología innovadora y resultados garantizados.</p>
+                    <ul class="benefits">
+                        <li>✅ Clases personalizadas</li>
+                        <li>✅ Profesores expertos</li>
+                        <li>✅ Modalidad online o presencial</li>
+                        <li>✅ Material didáctico incluido</li>
+                    </ul>
+                </div>
+                <div class="hero-form">
+                    <div class="form-container">
+                        <h3>Solicita tu clase gratuita</h3>
+                        <p>Completa tus datos y te contactaremos para coordinar tu clase de prueba</p>
+                        
+                        <form id="leadForm" class="lead-form">
+                            <div class="form-group">
+                                <label for="name">Nombre completo*</label>
+                                <input type="text" id="name" name="name" placeholder="Ingresa tu nombre completo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Correo electrónico*</label>
+                                <input type="email" id="email" name="email" placeholder="ejemplo@email.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Teléfono*</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+34 600 000 000" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="course">Curso de interés (opcional)</label>
+                                <input type="text" id="course" name="course" placeholder="Ej: Inglés B2, Oposiciones Administrativo">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="modality">Modalidad preferida*</label>
+                                <select id="modality" name="modality" required>
+                                    <option value="" disabled selected>Selecciona una opción</option>
+                                    <option value="online">Online</option>
+                                    <option value="presencial">Presencial</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group terms">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">Acepto la <a href="#">política de privacidad</a> y recibir información sobre cursos y promociones</label>
+                            </div>
+                            
+                            <button type="submit" class="btn-submit">Reservar clase gratuita</button>
+                        </form>
+                        
+                        <div id="message" class="message"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="features">
+                <h2>¿Por qué elegir LinguaPro?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3>Profesores nativos y expertos</h3>
+                        <p>Contamos con docentes certificados y con amplia experiencia en la enseñanza de idiomas y preparación de oposiciones.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Método innovador</h3>
+                        <p>Nuestra metodología combina lo mejor de la enseñanza tradicional con las últimas tecnologías educativas.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Flexibilidad horaria</h3>
+                        <p>Clases adaptadas a tu disponibilidad, con horarios desde primera hora de la mañana hasta última de la tarde.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Grupos reducidos</h3>
+                        <p>Atención personalizada en grupos de máximo 8 alumnos para garantizar el mejor aprendizaje.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Academia LinguaPro. Todos los derechos reservados.</p>
+            <p>Calle Educación, 123 - 28080 Madrid | Tel: 910 000 000 | info@linguapro.com</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
