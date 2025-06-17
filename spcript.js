@@ -31,10 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Mostrar mensaje de carga
             showMessage('Enviando tu solicitud...', 'success');
             
-            // Aquí deberías reemplazar esta URL con tu webhook real
             const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook/ed72251a-3283-4dec-86bd-d91ae65820ac';
             
-            // Enviar datos al webhook
             const response = await fetch(webhookUrl, {
                 method: 'POST',
                 headers: {
@@ -47,7 +45,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 showMessage('¡Gracias por tu interés! Te hemos enviado un correo con los detalles de tu clase gratuita.', 'success');
                 form.reset(); // Limpiar formulario
             } else {
-                throw new Error('Error en la respuesta del servidor');
+                const errorText = await response.text();
+                showMessage('Error del servidor: ' + errorText, 'error');
+                return;
             }
         } catch (error) {
             console.error('Error:', error);
@@ -59,11 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
         messageDiv.textContent = text;
         messageDiv.className = 'message ' + type;
         
-        // Ocultar mensaje después de 5 segundos (excepto para errores)
         if (type === 'success') {
             setTimeout(() => {
                 messageDiv.style.display = 'none';
             }, 5000);
+        } else {
+            messageDiv.style.display = 'block';
         }
     }
 });
