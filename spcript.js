@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showMessage('Enviando tu solicitud...', 'success');
             
             // Aquí deberías reemplazar esta URL con tu webhook real
-            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook/c5d8b9fe-53cc-4a32-945b-f4518e54c476';
+            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook-test/c5d8b9fe-53cc-4a32-945b-f4518e54c476';
             
             // Enviar datos al webhook
             const response = await fetch(webhookUrl, {
