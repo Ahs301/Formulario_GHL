@@ -6,30 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         messageDiv.style.display = 'none';
 
-        // Validación básica
         const name = document.getElementById('name').value.trim();
         const email = document.getElementById('email').value.trim();
         const phone = document.getElementById('phone').value.trim();
+        const course = document.getElementById('course').value.trim();
         const modality = document.getElementById('modality').value;
 
+        // Validación básica
         if (!name || !email || !phone || !modality) {
             showMessage('Por favor, completa todos los campos obligatorios.', 'error');
             return;
         }
 
-        // Validación de email
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
-            showMessage('Por favor, introduce un correo electrónico válido.', 'error');
-            return;
-        }
+        const formData = new FormData();
+        formData.append('name', name);
+        formData.append('email', email);
+        formData.append('phone', phone);
+        formData.append('course', course);
+        formData.append('modality', modality);
 
         try {
             showMessage('Enviando tu solicitud...', 'success');
 
             const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook/ed72251a-3283-4dec-86bd-d91ae65820ac';
-
-            const formData = new FormData(form);
 
             const response = await fetch(webhookUrl, {
                 method: 'POST',
@@ -37,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             if (response.ok) {
-                showMessage('¡Gracias por tu interés! Te hemos enviado un correo con los detalles de tu clase gratuita.', 'success');
+                showMessage('¡Gracias por tu interés! Te contactaremos pronto.', 'success');
                 form.reset();
             } else {
                 const errorText = await response.text();
@@ -45,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         } catch (error) {
             console.error('Error:', error);
-            showMessage('Hubo un error al enviar tu solicitud. Por favor, inténtalo de nuevo más tarde.', 'error');
+            showMessage('Error al enviar la solicitud. Intenta más tarde.', 'error');
         }
     });
 
