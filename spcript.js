@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         try {
             showMessage('Enviando tu solicitud...', 'success');
 
-            const webhookUrl = 'https://xuso18f.app.n8n.cloud/webhook/ed72251a-3283-4dec-86bd-d91ae65820ac';
+            const webhookUrl = 'https://serx301.app.n8n.cloud/webhook/b79b7227-8fec-47f8-a720-4d48020d4543';
 
             const response = await fetch(webhookUrl, {
                 method: 'POST',
